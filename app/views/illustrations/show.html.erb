@@ -13,4 +13,9 @@
       </div>
     </div>
   </div>
+  <!-- コメントフォーム -->
+  <%= render 'titles/form', { illustration: @illustration, title: @title } %>
+
+  <!-- コメントエリア -->
+  <%= render 'titles/titles', { titles: @titles } %>
 </div>

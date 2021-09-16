@@ -5,5 +5,7 @@ class IllustrationsController < ApplicationController
 
   def show
     @illustration = Illustration.find(params[:id])
+    @title = Title.new
+    @titles = @illustration.titles.order(created_at: :desc)
   end
 end

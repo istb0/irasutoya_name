@@ -1,0 +1,11 @@
+<div class="row mb-3">
+  <div class="col-lg-8 offset-lg-2">
+    <%= form_with model: [illustration, title],local: true, id: 'new_title' do |f| %>
+      <%= f.label :user_name %>
+      <%= f.text_field :user_name, class: 'form-control mb-3', id: 'js-new-title-user_name', row: 4, placeholder: 'ニックネームを入力' %>
+      <%= f.label :content %>
+      <%= f.text_field :content, class: 'form-control mb-3', id: 'js-new-title-content', row: 4, placeholder: 'タイトルを入力' %>
+      <%= f.submit '投稿', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
