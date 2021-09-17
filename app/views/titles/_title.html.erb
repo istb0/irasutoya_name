@@ -4,5 +4,12 @@
     <div id="js-title-<%= title.id %>">
       <%= simple_format(title.content) %>
     </div>
+    <div>
+      <%= title.vote_quantity %><p>良い。</p>
+    </div>
+    <%= link_to "良い。", votes_path(title_id: title.id),
+            id: "js-vote-button-for-title-#{title.id}",
+            class:"float-right btn btn-primary",
+            method: :post %>
   </td>
 </tr>
