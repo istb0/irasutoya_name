@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_09_14_152232) do
   create_table "titles", force: :cascade do |t|
     t.string "content", null: false
     t.string "user_name", null: false
+    t.integer "vote_quantity"
     t.integer "illustration_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
