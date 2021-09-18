@@ -1,15 +1,19 @@
 <div class="row">
   <div class="col-lg-8 offset-lg-2">
-    <table id="js-table-title" class="table">
+    <table class="table">
+      <thead>
         <tr class="table-light">
           <th class="col-6"><%= t('illustrations.show.posted_title') %></th>
           <th class="col-2"><%= t('illustrations.show.posted_user') %></th>
           <th class="col-2"><%= t('illustrations.show.vote_quantity') %></th>
           <th class="col-2"><%= t('illustrations.show.vote') %></th>
         </tr>
+      </thead>
+      <tbody id="js-table-title">
         <tr>
           <%= render titles %>
         </tr>
+      </tbody>
     </table>
   </div>
 </div>
