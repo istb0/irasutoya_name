@@ -10,6 +10,9 @@
         <%= f.label :content %>
         <%= f.text_field :content, class: 'form-control mb-3', id: 'js-new-title-content', row: 4, placeholder: 'タイトルを入力' %>
       </div>
+      <div class="form-group">
+        <%= f.hidden_field :vote_quantity, value: 0 %>
+      </div>
       <%= f.submit t('defaults.post'), class: 'btn btn-primary' %>
     <% end %>
   </div>

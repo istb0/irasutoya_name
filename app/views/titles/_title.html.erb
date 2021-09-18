@@ -1,5 +1,5 @@
-<tr id="title-<%= title.id %>">
-  <td id="js-title-<%= title.id %>" class="col-6">
+<tr id="js-title-<%= title.id %>">
+  <td class="col-6">
       <%= simple_format(title.content) %>
   </td>
   <td class="col-2 small">
@@ -9,9 +9,10 @@
       <%= title.vote_quantity %><%= t('defaults.vote_quantity') %>
   </td>
   <td class="col-2">
-    <%= link_to t('defaults.vote'), votes_path(title_id: title.id),
-            id: "js-vote-button-for-title-#{title.id}",
-            class:"float-right btn btn-primary",
-            method: :post %>
+    <%= link_to t('defaults.vote'),
+                votes_path(title_id: title.id),
+                class:"float-right btn btn-primary",
+                method: :post,
+                remote: true %>
   </td>
 </tr>
