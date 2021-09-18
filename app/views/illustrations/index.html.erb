@@ -7,7 +7,7 @@
       <% if @illustrations.present? %>
         <%= render @illustrations %>
       <% else %>
-        <p>いらすとがありません。</p>
+        <p><%= t('.no_result') %></p>
       <% end %>
       </div>
     </div>

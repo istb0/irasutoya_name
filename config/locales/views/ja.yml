@@ -1,0 +1,13 @@
+ja:
+  defaults:
+    post: '投稿'
+    vote: 'Good'
+    vote_quantity: '票'
+    message:
+      posted: '%{item}を投稿しました'
+      not_posted: '%{item}を投稿できませんでした'
+      voted: '投票しました'
+  illustrations:
+    index:
+      title: 'いらすと一覧'
+      no_result: 'いらすとがありません。'

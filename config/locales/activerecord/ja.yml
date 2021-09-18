@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    models:
+      illustration: 'いらすと'
+      title: 'タイトル'
+      vote: '投票'
+    attributes:
+      illustration:
+        content: 'いらすと'
+      title:
+        content: 'タイトル'
+        user_name: 'ニックネーム'
+        vote_quantity: '得票数'
