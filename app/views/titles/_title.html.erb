@@ -1,12 +1,14 @@
 <tr id="title-<%= title.id %>">
-  <td>
-    <h3 class="small"><%= title.user_name %></h3>
-    <div id="js-title-<%= title.id %>">
+  <td id="js-title-<%= title.id %>" class="col-6">
       <%= simple_format(title.content) %>
-    </div>
-    <div>
-      <%= title.vote_quantity %><p><%= t('defaults.vote_quantity') %></p>
-    </div>
+  </td>
+  <td class="col-2 small">
+    <%= title.user_name %>
+  </td>
+  <td class="col-2">
+      <%= title.vote_quantity %><%= t('defaults.vote_quantity') %>
+  </td>
+  <td class="col-2">
     <%= link_to t('defaults.vote'), votes_path(title_id: title.id),
             id: "js-vote-button-for-title-#{title.id}",
             class:"float-right btn btn-primary",

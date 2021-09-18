@@ -11,3 +11,8 @@ ja:
     index:
       title: 'いらすと一覧'
       no_result: 'いらすとがありません。'
+    show:
+      posted_title: 'タイトル'
+      posted_user: 'ニックネーム'
+      vote_quantity: '得票数'
+      vote: '投票'
