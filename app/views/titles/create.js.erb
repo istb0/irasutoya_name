@@ -1,0 +1,8 @@
+$("#error_messages").remove();
+<% if @title.errors.present? %>
+  $("#new_title").prepend("<%= j(render 'shared/error_messages', { object: @title }) %>");
+<% else %>
+  $("#js-table-title").prepend("<%= j(render 'titles/title', { title: @title }) %>");
+  $("#js-new-title-user_name, #js-new-title-content").val('')
+<% end %>
+<%= "test" %>

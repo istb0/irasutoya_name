@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root 'illustrations#index'
+
+  resources :illustrations, only: %i[index show] do
+    resources :titles, only: %i[create], shallow: true
+  end
+  resources :votes, only: %i[create]
 end
