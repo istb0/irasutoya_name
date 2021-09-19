@@ -1,10 +1,20 @@
 <div class="container pt-3">
   <div class="col-lg-8 offset-lg-2">
-      <%= image_tag @illustration.content, class: 'img-thumbnail img-fluid', size: '200x200' %>
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-lg-4 text-center">
+          <h3>いらすと</h3>
+          <%= image_tag @illustration.content, class: 'img-fluid', size: '200x200' %>
+        </div>
+        <div class="col-lg-8">
+          <div class="card-body">
+            <!-- 投稿フォーム -->
+            <%= render 'titles/form', { illustration: @illustration, title: @title } %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- コメントフォーム -->
-  <%= render 'titles/form', { illustration: @illustration, title: @title } %>
-
-  <!-- コメントエリア -->
+  <!-- 投稿一覧 -->
   <%= render 'titles/titles', { titles: @titles } %>
 </div>

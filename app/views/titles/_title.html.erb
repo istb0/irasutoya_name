@@ -9,10 +9,10 @@
       <%= title.vote_quantity %><%= t('defaults.vote_quantity') %>
   </td>
   <td class="col-2">
-    <%= link_to t('defaults.vote'),
-                votes_path(title_id: title.id),
-                class:"float-right btn btn-primary",
+    <%= link_to votes_path(title_id: title.id),
                 method: :post,
-                remote: true %>
+                remote: true do %>
+      <%= image_tag 'text_yu.png', size: '30x30' %>
+    <% end %>
   </td>
 </tr>

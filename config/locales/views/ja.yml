@@ -1,8 +1,7 @@
 ja:
   defaults:
     post: '投稿'
-    vote: 'Good'
-    vote_quantity: '票'
+    vote_quantity: '有'
     message:
       posted: '%{item}を投稿しました'
       not_posted: '%{item}を投稿できませんでした'
@@ -14,5 +13,5 @@ ja:
     show:
       posted_title: 'タイトル'
       posted_user: 'ニックネーム'
-      vote_quantity: '得票数'
-      vote: '投票'
+      vote_quantity: '得有数'
+      vote: '応援'

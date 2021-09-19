@@ -1,14 +1,22 @@
-<h1>Title</h1>
-<div class="container pt-3">
-  <!-- いらすと一覧 -->
-  <div class="row">
-    <div class="col-12">
+<div class="container pt-5">
+  <div class="row mb-3">
+    <div class="col-lg-8 offset-lg-2">
+      <h1>いらすとやタイトルを勝手に考えよう！</h1>
+      <p>欲しい素材が必ず見つかるサイト"いらすとや"</p>
+      <p>中にはぱっと見てよくわからない素材も...</p>
+      <p>あなたならどんなタイトルをつけますか？？</p>
+      <p>気になるタイトルは<%= image_tag 'text_yu.png', size: '25x25' %>ボタンで応援しましょ（連打歓迎）</p>
+      <!-- いらすと一覧 -->
       <div class="row">
-      <% if @illustrations.present? %>
-        <%= render @illustrations %>
-      <% else %>
-        <p><%= t('.no_result') %></p>
-      <% end %>
+        <div class="col-12">
+          <div class="row">
+            <% if @illustrations.present? %>
+              <%= render @illustrations %>
+            <% else %>
+              <p><%= t('.no_result') %></p>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
