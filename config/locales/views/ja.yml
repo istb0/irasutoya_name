@@ -11,7 +11,10 @@ ja:
       title: 'いらすと一覧'
       no_result: 'いらすとがありません。'
     show:
+      illustration: 'いらすと'
       posted_title: 'タイトル'
       posted_user: 'ニックネーム'
+      order_new: '新着順'
+      order_popular: '人気順'
       vote_quantity: '得有数'
       vote: '応援'
