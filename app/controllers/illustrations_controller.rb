@@ -6,6 +6,10 @@ class IllustrationsController < ApplicationController
   def show
     @illustration = Illustration.find(params[:id])
     @title = Title.new
-    @titles = @illustration.titles.order(created_at: :desc)
+    if params[:type] == 'order_popular'
+      @titles = @illustration.titles.order(vote_quantity: :desc)
+    else
+      @titles = @illustration.titles.order(created_at: :desc)
+    end
   end
 end
