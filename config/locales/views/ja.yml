@@ -1,7 +1,7 @@
 ja:
   defaults:
     post: '投稿'
-    vote_quantity: '有'
+    vote_quantity: ' 有'
     message:
       posted: '%{item}を投稿しました'
       not_posted: '%{item}を投稿できませんでした'
