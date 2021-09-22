@@ -15,32 +15,39 @@
       </div>
     </div>
   </div>
+  <p>
+    <button class="col-lg-8 offset-lg-2 btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-titles" aria-expanded="false" aria-controls="collapse-titles">
+      みんなの投稿はコチラ
+    </button>
+  </p>
   <!-- 投稿一覧 -->
-  <div class="row mb-3">
-    <div class="col-lg-8 offset-lg-2 text-center">
-      <%= link_to t('.order_new'),
+  <div class="collapse" id="collapse-titles">
+    <div class="row mb-3">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <%= link_to t('.order_new'),
                   illustration_path,
                   class: 'btn btn-outline-dark btn-sm',
                   remote: true %>
-      <%= link_to t('.order_popular'),
+        <%= link_to t('.order_popular'),
                   illustration_path(type: 'order_popular'),
                   class: 'btn btn-outline-dark btn-sm',
                   remote: true %>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-8 offset-lg-2">
-      <table class="table table-hover">
-        <thead>
-          <tr class="table-secondary">
-            <th class="col-5"><%= t('illustrations.show.posted_title') %></th>
-            <th class="col-3"><%= t('illustrations.show.posted_user') %></th>
-            <th class="col-2"><%= t('illustrations.show.vote_quantity') %></th>
-            <th class="col-2"><%= t('illustrations.show.vote') %></th>
-          </tr>
-        </thead>
-        <%= render 'titles/titles', { titles: @titles } %>
-      </table>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <table class="table table-hover">
+          <thead>
+            <tr class="table-secondary">
+              <th class="col-5"><%= t('illustrations.show.posted_title') %></th>
+              <th class="col-3"><%= t('illustrations.show.posted_user') %></th>
+              <th class="col-2"><%= t('illustrations.show.vote_quantity') %></th>
+              <th class="col-2"><%= t('illustrations.show.vote') %></th>
+            </tr>
+          </thead>
+          <%= render 'titles/titles', { titles: @titles } %>
+        </table>
+      </div>
     </div>
   </div>
 </div>
