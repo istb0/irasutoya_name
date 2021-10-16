@@ -5,12 +5,12 @@ class Title < ApplicationRecord
   validates :content, presence: true
   validates :user_name, presence: true
 
-  def vote(title)
-    if title.vote_quantity.nil?
-      title.vote_quantity = 1
+  def vote
+    if self.vote_quantity.nil?
+      self.vote_quantity = 1
     else
-      title.vote_quantity += 1
+      self.vote_quantity += 1
     end
-    title.save
+    self.save
   end
 end

@@ -1,6 +1,6 @@
 class VotesController < ApplicationController
   def create
     @title = Title.find(params[:title_id])
-    @title.vote(@title)
+    @title.vote
   end
 end
