@@ -11,6 +11,19 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <%= favicon_link_tag('character_program_happy') %>
+
+    <% if Rails.env.production? %>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RY939B098"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-8RY939B098');
+        gtag('config', 'UA-210348179-1');
+      </script>
+    <% end %>
   </head>
 
   <body>
